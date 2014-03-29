@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>PRESSA - HTML5 Website Template</title>
+	<title> 1234 </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -246,7 +246,10 @@
                                                     <ul class="media-list">
                                                         <li class="media"><a href="#" class="pull-right"><img src="demos/01_recent.jpg" alt="" width="70" class="img-thumbnail media-object"></a>
                                                             <div class="media-body">
-                                                                <p>Lorem Ipsum beschikbaar heeft te lijden gehad van wijzigingen in een of andere vorm, door ingevoegde</p>
+                                                                <p>
+
+	                                                        	{% include in.html %}
+								</p>
                                                             </div>
                                                         </li>
                                                         <li class="media"><a href="#" class="pull-right"><img src="demos/02_recent.jpg" alt="" width="70" class="img-thumbnail media-object"></a>
@@ -621,8 +624,8 @@
 	<section class="section-whitebg">
     	<div class="container">
 			<div class="section-title text-center">
-				<h2 class="bigtitle">What We Do</h2>
-				<h4 class="lead">Our amazing features & services and others listed below</h4>
+				<h2 class="bigtitle">{% include in.html %}</h2>
+				<h4 class="lead">{{ page.title }}</h4>
 				<hr>
 			</div><!-- end section-title -->
             
