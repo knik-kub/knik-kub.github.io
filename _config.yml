@@ -3,9 +3,3 @@ markdown: redcarpet
 pygments: true
 baseurl: /
 permalink: /:year-:month-:day-:title.html
-gems: [oembed, galleries]
-dir: images/galleries
-url: /images/gallery1
-thumb_width: 150
-thumb_height: 150
-columns: 4
