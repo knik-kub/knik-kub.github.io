@@ -38,7 +38,7 @@
 // Menu drop down effect
 	$('.dropdown-toggle').dropdownHover().dropdown();
 		$(document).on('click', '.fhmm .dropdown-menu', function(e) {
-		  e.stopPropagation()
+		e.stopPropagation()
 	})
 
 //Parallax

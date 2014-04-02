@@ -41,6 +41,9 @@
     <div id="wrapper" class="container">
 {% include topbar.html %}    
 {% include header.html %}    
+{% include slider.html %}    
+
+   
 
      <section class="section-whitebg dm-shadow">
         <div class="container">
@@ -50,7 +53,6 @@
             </div><!-- end section-title -->    
             <div>
                 {{ content }}
-               
             </div>
         </div>
     </sections>
@@ -178,10 +180,8 @@
         });
     });
     </script>
-
-    
-<script>
-     document.getElementById("foto").className = "active";  
+    <script>
+     document.getElementById("reg").className = "active";  
 </script>
 </body>
 </html>
