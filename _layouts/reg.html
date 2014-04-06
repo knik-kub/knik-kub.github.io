@@ -29,6 +29,35 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png">
 
+   <link rel="stylesheet" href="uploader/css/normalize.css">
+        <link rel="stylesheet" href="uploader/css/main.css">
+        <style>
+          #progress_bar {
+            margin: 10px 0;
+            padding: 3px;
+            border: 1px solid #000;
+            font-size: 14px;
+            clear: both;
+            opacity: 0;
+            -moz-transition: opacity 1s linear;
+            -o-transition: opacity 1s linear;
+            -webkit-transition: opacity 1s linear;
+          }
+          #progress_bar.loading {
+            opacity: 1.0;
+          }
+          #progress_bar .percent {
+            background-color: #99ccff;
+            height: auto;
+            width: 0;
+          }
+        </style>
+
+        <script src="uploader/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+
+
+
 </head>
 <body id="boxed" >
     <div id="wrapper" class="container">
@@ -46,131 +75,333 @@
               <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#pers" data-toggle="tab"><i class="fa fa-user"></i>Регистрация индивидуальных участников</a></li>
                 <li><a href="#team" data-toggle="tab"><i class="fa fa-users"></i>Регистрация команд</a></li>
-                </li>
               </ul>
               <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="pers">
 
-                <form class="form-horizontal" role="form">
-                 <!--FIO-->
+              <!-- Begin MailChimp Signup Form -->
+<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=21560b54c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" novalidate>
+  <h2>Регистрация участника</h2>
+ <!--FIO-->
                   <div class="form-group">
-                    <label for="F" class="col-lg-2 control-label">Фамилия</label>
+                    <label for="LNAME" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="exampleInputF" placeholder="Фамилия" REQUIRED>
+                        <input name=LNAME type="text" class="form-control" id="exampleInputF" placeholder="Фамилия" REQUIRED>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="I" class="col-lg-2 control-label">Имя</label>
+                    <label for="FNAME" class="col-lg-2 control-label">Имя</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="exampleInputI" placeholder="Имя" REQUIRED>
+                        <input name="FNAME" type="text" class="form-control" id="exampleInputI" placeholder="Имя" REQUIRED>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="O" class="col-lg-2 control-label">Отчество</label>
+                    <label for="MNAME" class="col-lg-2 control-label">Отчество</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="exampleInputO" placeholder="Отчество" REQUIRED>
+                        <input name="MNAME" type="text" class="form-control" id="exampleInputO" placeholder="Отчество" REQUIRED>
                     </div>
                   </div>
                   <hr/>
+                  <!-- направление -->
                   <div class="form-group">
-                    <label for="N" class="col-lg-2 control-label">Направление</label>
+                    <label for="FIELD" class="col-lg-2 control-label">Направление</label>
                     <div class="col-lg-10">
-                        <select name="N" class="form-control" id="exampleInputN" required>
-                            <option value="" disabled selected>Выберите направление</option>
-                            <option name="d" >Дизайн</option>
-                            <option name="a" >Автоматизация</option>
-                            <option name="p" >Проектирование</option>
+                        <select name="FIELD" class="form-control" id="exampleInputN" required>
+                            <option value=""></option>
+                            <option value="Дизайн" >Дизайн</option>
+                            <option value="Автоматизация" >Автоматизация</option>
+                            <option value="Проектирование" >Проектирование</option>
                         </select>
                     </div>
                   </div>
-                  
-                                  
-                  <hr/>  
+
+   <hr/>  
+   <!-- email and phone-->
                   <div class="form-group">
-                    <label for="E" class="col-lg-2 control-label">Email</label>
+                    <label for="EAMIL" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                        <input type="email" class="form-control" id="exampleInputE" placeholder="yourname@youremail.ru" required>
+                        <input name="EMAIL" type="email" class="form-control" id="exampleInputE" placeholder="yourname@youremail.ru" required>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="P" class="col-lg-2 control-label">Телефон</label>
+                    <label for="PHONE" class="col-lg-2 control-label">Телефон</label>
                     <div class="col-lg-10">
-                        <input type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                        <input name="PHONE" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
                     </div>
                   </div>
                   <hr/>  
 
-
                   <div class="form-group">
-                    <label for="Obr" class="col-lg-2 control-label">Образование</label>
+                    <label for="EDU" class="col-lg-2 control-label">Образование</label>
                     <div class="col-lg-10">
-                        <select name="Obr" class="form-control" id="exampleInputObr">
-                            <option name="v" >Высшее</option>
-                            <option name="nv" >Не оконченеое высшее</option>
-                            <option name="s" >Среднее</option>
-                            <option name="ns" >Не оконченное среднее</option>
+                        <select name="EDU" class="form-control" id="exampleInputObr">
+                             <option value="Высшее">Высшее</option>
+                            <option value="Неоконченное высшее">Неоконченеое высшее</option>
+                            <option value="Среднее">Среднее</option>
+                            <option value="Неоконченное среднее">Неоконченное среднее</option>
                         </select>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="NK" class="col-lg-2 control-label">Наименование компании</label>
+                    <label for="COMP" class="col-lg-2 control-label">Наименование компании</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="exampleInputNK" placeholder="Наименование компании">
+                        <input name="COMP" type="text" class="form-control" id="exampleInputNK" placeholder="Наименование компании">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="Dol" class="col-lg-2 control-label">Должность</label>
+                    <label for="POSITION" class="col-lg-2 control-label">Должность</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" id="exampleInputDol" placeholder="Должность">
+                        <input name="POSITION" type="text" class="form-control" id="exampleInputDol" placeholder="Должность">
                     </div>
                   </div>
                   <hr/>                  
-                  <div class="form-group">
+
+
+                   <div class="form-group">
                     <p><label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/></p>
-                    <textarea rows=10 class="form-control" id="exampleInputCrea" placeholder="Ответ на вопрос" required></textarea>
+                    <textarea id="AREA" rows=10 class="form-control" id="exampleInputCrea" placeholder="Ответ на вопрос" required></textarea>
+                  </div>
+      
+                    <input type="text" value="" name="QUESTION" class="required" id="QUESTION" style="display:none;">
+
+
+                  <div class="mc-field-group">
+                    <input type="file" id="files" name="IMAGEURL" />
+                    <button onclick="abortRead();">Cancel read</button>
+                    <div id="progress_bar"><div class="percent">0%</div></div>
+
+                    <script src="uploader/js/reader.js"></script>
+                    <script>window.jQuery || document.write('<script src="uploader/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+                    <script src="uploader/js/plugins.js"></script>
                   </div>
 
-                  <hr/>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Дополнительная инофрмация</label>
-                    <input type="file" id="exampleInputFile">
-                    <p class="help-block">Example block-level help text here.</p>
-                  </div>
-
+              <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_e2373dfb66b59ba76023bbe1d_21560b54c0" value=""></div>
+  
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" required>Даю согласие на обработку персональных данных?!
                     </label>
                   </div>
-                  <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                  <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTION").value = document.getElementById("AREA").value'>Зарегистрироваться</button>
                 </form>
 
-                </div>
+              </div>
+<!--End mc_embed_signup-->
+
                 <div class="tab-pane fade" id="team">
                 <!-- -->
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile">
-                    <p class="help-block">Example block-level help text here.</p>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                
+                  <!-- form for team -->
+<!-- Begin MailChimp Signup Form -->
+<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=1a9d8d84ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+  <label for="mce-CNAME">Название команды  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="CNAME" class="required" id="mce-CNAME">
+</div>
+
+<div class="tab-services clearfix">
+              <ul id="myTab1" class="nav nav-tabs">
+                <li class="active"><a href="#n1" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №1</a></li>
+                <li class=""><a href="#n2" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №2</a></li>
+                <li class=""><a href="#n3" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №3</a></li>
+              </ul>
+              <div id="myTabContent1" class="tab-content">
+                <div class="tab-pane fade active in clearfix" id="n1">
+
+
+<div class="mc-field-group">
+  <label for="mce-LNAME1">Фамилия  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="LNAME1" class="required" id="mce-LNAME1">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FNAME1">Имя  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="FNAME1" class="required" id="mce-FNAME1">
+</div>
+<div class="mc-field-group">
+  <label for="mce-MNAME1">Отчеcтво  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="MNAME1" class="required" id="mce-MNAME1">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FIELD1">Направление  <span class="asterisk">*</span>
+</label>
+  <select name="FIELD1" class="required" id="mce-FIELD1">
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+ </select>
+</div>
+
+
+      <div class="form-group">
+                    <label for="COMP" class="col-lg-2 control-label">Наименование компании</label>
+                    <div class="col-lg-10">
+                        <input name="COMP" type="text" class="form-control" id="exampleInputNK" placeholder="Наименование компании">
+                    </div>
+                  </div>
+
+      <div class="form-group">
+  <label for="mce-EMAIL">Email (основной адрес)</label>
+  <div class="col-lg-10">
+     <input name="email" type="text" class="form-control" id="exampleInputNK" placeholder="Наименование компании" required>
+  </div>
+</div>
+
+
+<div class="mc-field-group size1of2">
+  <label for="mce-PHONE1">Телефон  <span class="asterisk">*</span>
+</label>
+    <div class="phonefield phonefield-us">
+        (<span class="phonearea"><input pattern="[0-9]*" id="mce-PHONE1-area" name="PHONE1[area]" maxlength="3" size="3" value="" type="text"></span>)
+        <span class="phonedetail1"><input pattern="[0-9]*" id="mce-PHONE1-detail1" name="PHONE1[detail1]" maxlength="3" size="3" value="" type="text"></span> - 
+        <span class="phonedetail2"><input pattern="[0-9]*" id="mce-PHONE1-detail2" name="PHONE1[detail2]" maxlength="4" size="4" value="" type="text"></span>
+    <span class="small-meta nowrap">(###) ###-####</span>
+    <div class="fake-phone"><input type="hidden" class="required phone" id="PHONE1-fake-phone" value=""></div>
+    </div>
+</div><div class="mc-field-group">
+  <label for="mce-COMP1">Компания </label>
+  <input type="text" value="" name="COMP1" class="" id="mce-COMP1">
+</div>
+<div class="mc-field-group">
+  <label for="mce-POSITION1">Должность </label>
+  <input type="text" value="" name="POSITION1" class="" id="mce-POSITION1">
+</div>
+</div>
+
+<div class="tab-pane fade in clearfix" id="n2">
+
+<div class="mc-field-group">
+  <label for="mce-LNAME2">Фамилия  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="LNAME2" class="required" id="mce-LNAME2">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FNAME2">Имя  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="FNAME2" class="required" id="mce-FNAME2">
+</div>
+<div class="mc-field-group">
+  <label for="mce-MNAME2">Отчеcтво  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="MNAME2" class="required" id="mce-MNAME2">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FIELD2">Направление  <span class="asterisk">*</span>
+</label>
+  <select name="FIELD2" class="required" id="mce-FIELD2">
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+
+  </select>
+</div>
+<div class="mc-field-group">
+  <label for="mce-EMAIL2">Email  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="EMAIL2" class="required" id="mce-EMAIL2">
+</div>
+<div class="mc-field-group size1of2">
+  <label for="mce-PHONE2">Телефон  <span class="asterisk">*</span>
+</label>
+    <div class="phonefield phonefield-us">
+        (<span class="phonearea"><input pattern="[0-9]*" id="mce-PHONE2-area" name="PHONE2[area]" maxlength="3" size="3" value="" type="text"></span>)
+        <span class="phonedetail1"><input pattern="[0-9]*" id="mce-PHONE2-detail1" name="PHONE2[detail1]" maxlength="3" size="3" value="" type="text"></span> - 
+        <span class="phonedetail2"><input pattern="[0-9]*" id="mce-PHONE2-detail2" name="PHONE2[detail2]" maxlength="4" size="4" value="" type="text"></span>
+    <span class="small-meta nowrap">(###) ###-####</span>
+    <div class="fake-phone"><input type="hidden" class="required phone" id="PHONE2-fake-phone" value=""></div>
+    </div>
+</div><div class="mc-field-group">
+  <label for="mce-COMP2">Компания </label>
+  <input type="text" value="" name="COMP2" class="" id="mce-COMP2">
+</div>
+<div class="mc-field-group">
+  <label for="mce-POSITION2">Должность </label>
+  <input type="text" value="" name="POSITION2" class="" id="mce-POSITION2">
+</div>
+</div>
+
+<div class="tab-pane fade in clearfix" id="n3">
+<div class="mc-field-group">
+  <label for="mce-LNAME3">Фамилия  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="LNAME3" class="required" id="mce-LNAME3">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FNAME3">Имя  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="FNAME3" class="required" id="mce-FNAME3">
+</div>
+<div class="mc-field-group">
+  <label for="mce-MNAME3">Отчеcтво  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="MNAME3" class="required" id="mce-MNAME3">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FILED3">Направление  <span class="asterisk">*</span>
+</label>
+  <select name="FILED3" class="required" id="mce-FILED3">
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+
+  </select>
+</div>
+<div class="mc-field-group">
+  <label for="mce-EMAIL3">Email  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="EMAIL3" class="required" id="mce-EMAIL3">
+</div>
+<div class="mc-field-group size1of2">
+  <label for="mce-PHONE3">Телефон  <span class="asterisk">*</span>
+</label>
+    <div class="phonefield phonefield-us">
+        (<span class="phonearea"><input pattern="[0-9]*" id="mce-PHONE3-area" name="PHONE3[area]" maxlength="3" size="3" value="" type="text"></span>)
+        <span class="phonedetail1"><input pattern="[0-9]*" id="mce-PHONE3-detail1" name="PHONE3[detail1]" maxlength="3" size="3" value="" type="text"></span> - 
+        <span class="phonedetail2"><input pattern="[0-9]*" id="mce-PHONE3-detail2" name="PHONE3[detail2]" maxlength="4" size="4" value="" type="text"></span>
+    <span class="small-meta nowrap">(###) ###-####</span>
+    <div class="fake-phone"><input type="hidden" class="required phone" id="PHONE3-fake-phone" value=""></div>
+    </div>
+</div><div class="mc-field-group">
+  <label for="mce-COMP3">Компания </label>
+  <input type="text" value="" name="COMP3" class="" id="mce-COMP3">
+</div>
+<div class="mc-field-group">
+  <label for="mce-POSITION3">Должность </label>
+  <input type="text" value="" name="POSITION3" class="" id="mce-POSITION3">
+</div>
+
+</div>
+</div>
+</div> <!-- tabz-->
+
+
+<div class="mc-field-group">
+  <label for="mce-QUESTION">Вопрос:  <span class="asterisk">*</span>
+</label>
+  <input type="text" value="" name="QUESTION" class="required" id="mce-QUESTION">
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_e2373dfb66b59ba76023bbe1d_1a9d8d84ac" value=""></div>
+  <!--div class="clear"><input type="submit" value="Отправить заявку" name="subscribe" id="mc-embedded-subscribe" class="button"></div-->
+     <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTION").value = document.getElementById("AREA").value'>Зарегистрироваться</button>
+</form>
+<!--End mc_embed_signup-->
                 </div>
               </div>
             </div><!-- /example -->
