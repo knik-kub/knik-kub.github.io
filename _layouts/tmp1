@@ -1,0 +1,245 @@
+
+<div class="tab-services clearfix">
+              <ul id="myTab1" class="nav nav-tabs">
+                <li class="active"><a href="#n1" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №1</a></li>
+                <li class=""><a href="#n2" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №2</a></li>
+                <li class=""><a href="#n3" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №3</a></li>
+              </ul>
+              <div id="myTabContent1" class="tab-content">
+                <div class="tab-pane fade active in clearfix" id="n1">
+
+
+      <div class="form-group">
+        <label for="LNAME1" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" value="" name="LNAME1" class="form-control" required>
+                    </div>
+      </div>
+
+
+<div class="form-group">
+  <label for="FNAME1" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="FNAME1" class="form-control"  required>
+</div>
+</div>
+
+
+<div class="form-group">
+  <label for="MNAME1" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="MNAME1" class="form-control"  required>
+</div>
+</div>
+
+<hr/>
+<div class="form-group">
+  <label for="FIELD1" class="col-lg-2 control-label">Направление</label>
+  <div class="col-lg-10">
+  <select name="FIELD1" class="form-control"  required>
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+ </select>
+</div>
+</div>
+<hr/>
+
+      <div class="form-group">
+  <label for="mce-EMAIL" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="EMAIL" type="text" class="form-control" id="exampleInputNK" placeholder="teammember1email@domain.com" required>
+  </div>
+</div>
+
+
+<div class="form-group">
+                    <label for="PHONE1" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE1" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+
+<hr/>
+      <div class="form-group">
+        <label for="COMP1" class="col-lg-2 control-label">Компания</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP1" class="form-control" id="COMP1" placeholder="Наименование компании">
+      </div>
+  </div>
+
+
+ <div class="form-group">
+   <label for="POSITION1" class="col-lg-2 control-label">Должность</label>
+         <div class="col-lg-10">
+    <input type="text" value="" name="POSITION1" class="form-control" id="POSITION1" placeholder="Должность" >
+</div>
+</div>
+<hr/>
+</div>
+
+<div class="tab-pane fade in clearfix" id="n2">
+
+      <div class="form-group">
+        <label for="LNAME2" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" value="" name="LNAME2" class="form-control"  required>
+                    </div>
+      </div>
+
+
+<div class="form-group">
+  <label for="FNAME2" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="FNAME2" class="form-control"  required>
+</div>
+</div>
+
+
+<div class="form-group">
+  <label for="MNAME2" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="MNAME2" class="form-control"  required>
+</div>
+</div>
+
+<hr/>
+<div class="form-group">
+  <label for="FIELD2" class="col-lg-2 control-label">Направление</label>
+  <div class="col-lg-10">
+
+  <select name="FIELD2" class="form-control"  required>
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+ </select>
+</div>
+</div>
+<hr/>
+
+      <div class="form-group">
+  <label for="EMAIL2" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="EMAIL2" type="text" class="form-control" id="exampleInputNK" placeholder="teammember2email@domain.com" required>
+  </div>
+</div>
+
+
+ <div class="form-group">
+                    <label for="PHONE2" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE2" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+<hr/>
+      <div class="form-group">
+        <label for="COMP2" class="col-lg-2 control-label">Компания</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP2" class="form-control"  placeholder="Наименование компании">
+      </div>
+  </div>
+
+ <div class="form-group">
+   <label for="POSITION2" class="col-lg-2 control-label">Должность</label>
+         <div class="col-lg-10">
+    <input type="text" value="" name="POSITION2" class="form-control"  placeholder="Должность">
+</div>
+</div>
+<hr/>
+
+</div>
+
+
+<div class="tab-pane fade in clearfix" id="n3">
+      <div class="form-group">
+        <label for="LNAME3" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" value="" name="LNAME3" class="form-control"  required>
+                    </div>
+      </div>
+
+
+<div class="form-group">
+  <label for="FNAME3" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="FNAME3" class="form-control"  required>
+</div>
+</div>
+
+<div class="form-group">
+  <label for="MNAME3" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text" value="" name="MNAME3" class="form-control" required>
+</div>
+</div>
+
+<hr/>
+<div class="form-group">
+  <label for="FIELD3" class="col-lg-2 control-label">Направление</label>
+  <div class="col-lg-10">
+
+  <select name="FIELD3" class="form-control" required>
+  <option value=""></option>
+  <option value="Дизайн">Дизайн</option>
+<option value="Автоматизация">Автоматизация</option>
+<option value="Проектирование">Проектирование</option>
+ </select>
+</div>
+</div>
+<hr/>
+
+      <div class="form-group">
+  <label for="EMAIL3" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="email" type="text" class="form-control" id="exampleInputNK" placeholder="teammember3email@domain.com" required>
+  </div>
+</div>
+
+<div class="form-group">
+                    <label for="PHONE3" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE3" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+
+
+      <div class="form-group">
+        <label for="COMP3" class="col-lg-2 control-label">Компания</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP3" class="form-control" id="COMP3" placeholder="Наименование компании">
+      </div>
+  </div>
+
+ <div class="form-group">
+   <label for="POSITION3" class="col-lg-2 control-label">Должность</label>
+         <div class="col-lg-10">
+    <input type="text" value="" name="POSITION3" class="form-control"  placeholder="Должность">
+</div>
+</div>
+<hr/>
+
+</div>
+</div> <!-- tabz-->
+
+
+   <div class="form-group">
+                    <p><label for="AREA" class="col-lg-2 control-label">Вопрос:</label><br/></p>
+                    <textarea id="AREA" name="AREA" rows=10 class="form-control"  placeholder="Ответ на вопрос" required></textarea>
+                  </div>
+      
+                    <input type="text" value="" name="QUESTION" class="required" id="QUESTION" style="display:none;">
+
+</div> 
+
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_e2373dfb66b59ba76023bbe1d_1a9d8d84ac" value=""></div>
+  <!--div class="clear"><input type="submit" value="Отправить заявку" name="subscribe" id="mc-embedded-subscribe" class="button"></div-->
+     <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTION").value = document.getElementById("AREA").value'>Зарегистрироваться</button>
