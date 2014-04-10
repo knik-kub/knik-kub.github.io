@@ -56,8 +56,6 @@
         <script src="uploader/js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
 
-
-
 </head>
 <body id="boxed" >
     <div id="wrapper" class="container">
@@ -80,7 +78,7 @@
                 <div class="tab-pane fade in active" id="pers">
 
               <!-- Begin MailChimp Signup Form -->
-<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=21560b54c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" novalidate>
+<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=21560b54c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" >
   <h2>Регистрация участника</h2>
  <!--FIO-->
                   <div class="form-group">
@@ -101,6 +99,14 @@
                         <input name="MNAME" type="text" class="form-control" id="exampleInputO" placeholder="Отчество" REQUIRED>
                     </div>
                   </div>
+
+  <div class="form-group">
+  <label for="mce-BDAY-month" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input name="BDAY" type="date" class="form-control" id="exampleInputO" placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+
                   <hr/>
                   <!-- направление -->
                   <div class="form-group">
@@ -132,17 +138,13 @@
                   </div>
                   <hr/>  
 
-                  <div class="form-group">
+                      <div class="form-group">
                     <label for="EDU" class="col-lg-2 control-label">Образование</label>
                     <div class="col-lg-10">
-                        <select name="EDU" class="form-control" id="exampleInputObr">
-                             <option value="Высшее">Высшее</option>
-                            <option value="Неоконченное высшее">Неоконченеое высшее</option>
-                            <option value="Среднее">Среднее</option>
-                            <option value="Неоконченное среднее">Неоконченное среднее</option>
-                        </select>
+                        <input name="EDU" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
                     </div>
                   </div>
+
                   <div class="form-group">
                     <label for="COMP" class="col-lg-2 control-label">Компания</label>
                     <div class="col-lg-10">
@@ -159,16 +161,18 @@
 
 
                    <div class="form-group">
-                    <p><label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/></p>
+                    <label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/><p id="questionplace"></p>
+                  <div class="col-lg-12">
                     <textarea id="AREA" rows=10 class="form-control"  placeholder="Ответ на вопрос" required></textarea>
                   </div>
+                  </div>
+
       
                     <input type="text" value="" name="QUESTION" class="required" id="QUESTION" style="display:none;">
 
 
                   <div class="mc-field-group">
                     <input type="file" id="files" name="IMAGEURL" />
-                    <button onclick="abortRead();">Cancel read</button>
                     <div id="progress_bar"><div class="percent">0%</div></div>
 
                     <script src="uploader/js/reader.js"></script>
@@ -184,7 +188,7 @@
   
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" required>Даю согласие на обработку персональных данных?!
+                      <input type="checkbox" required>Даю согласие на обработку персональных данных
                     </label>
                   </div>
                   <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTION").value = document.getElementById("AREA").value'>Зарегистрироваться</button>
@@ -198,12 +202,12 @@
                 
                   <!-- form for team -->
 <!-- Begin MailChimp Signup Form -->
-<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=1a9d8d84ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank" novalidate class="form-horizontal" role="form">
+<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=1a9d8d84ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank"  class="form-horizontal" role="form">
 
 <div class="form-group">
-  <label for="CNAME" class="col-lg-2 control-label">Название команды</label>
+  <label for="CNAME" class="col-lg-2 control-label">Название</label>
   <div class="col-lg-10">
-    <input type="text" value="" name="CNAME" class="form-control"  required>
+    <input type="text" value="" name="CNAME" class="form-control"  required placeholder="Название команды">
 </div>
 </div>
 
@@ -230,6 +234,18 @@
               <div id="myTabContent1" class="tab-content">
                 <div class="tab-pane fade active in clearfix" id="n1">
 
+<div class="form-group">
+  <label for="ROLE1" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select name="ROLE1" class="form-control"  required>
+  <option value=""></option>
+<option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option> </select>
+</div>
+</div>
+<hr/>
 
       <div class="form-group">
         <label for="LNAME1" class="col-lg-2 control-label">Фамилия</label>
@@ -254,19 +270,29 @@
 </div>
 </div>
 
+ <div class="form-group">
+  <label for="BDAY1" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input name="BDAY1" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+                      <div class="form-group">
+                    <label for="EDU1" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input name="EDU1" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
+                  </div>
+
+      <div class="form-group">
+        <label for="COMP1" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP1" class="form-control" id="COMP1" placeholder="Компания, должность">
+      </div>
+  </div>
+
 <hr/>
-<div class="form-group">
-  <label for="ROLE1" class="col-lg-2 control-label">Направление</label>
-  <div class="col-lg-10">
-  <select name="ROLE1" class="form-control"  required>
-  <option value=""></option>
-<option value="Инженер">Инженер</option>
-<option value="Дизайнер">Дизайнер</option>
-<option value="Программист АСУ">Программист АСУ</option>
-<option value="Экономист">Экономист</option> </select>
-</div>
-</div>
-<hr/>
+
 
       <div class="form-group">
   <label for="mce-EMAIL" class="col-lg-2 control-label">Email</label>
@@ -283,27 +309,23 @@
                     </div>
                   </div>
 
-<hr/>
-      <div class="form-group">
-        <label for="COMP1" class="col-lg-2 control-label">Компания</label>
-       <div class="col-lg-10">
-
-        <input type="text" value="" name="COMP1" class="form-control" id="COMP1" placeholder="Наименование компании">
-      </div>
-  </div>
-
-
- <div class="form-group">
-   <label for="POSITION1" class="col-lg-2 control-label">Должность</label>
-         <div class="col-lg-10">
-    <input type="text" value="" name="POSITION1" class="form-control" id="POSITION1" placeholder="Должность" >
-</div>
-</div>
-<hr/>
 </div>
 
 <div class="tab-pane fade in clearfix" id="n2">
+<div class="form-group">
+  <label for="ROLE2" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select name="ROLE2" class="form-control"  required>
+  <option value=""></option>
+  <option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option>
+ </select>
+</div>
+</div>
 
+<hr/>
       <div class="form-group">
         <label for="LNAME2" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
@@ -326,20 +348,29 @@
     <input type="text" value="" name="MNAME2" class="form-control"  required>
 </div>
 </div>
+ <div class="form-group">
+  <label for="BDAY2" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input name="BDAY2" type="date" class="form-control" id="exampleInputO" placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
 
-<hr/>
-<div class="form-group">
-  <label for="ROLE2" class="col-lg-2 control-label">Направление</label>
-  <div class="col-lg-10">
-  <select name="ROLE2" class="form-control"  required>
-  <option value=""></option>
-  <option value="Инженер">Инженер</option>
-<option value="Дизайнер">Дизайнер</option>
-<option value="Программист АСУ">Программист АСУ</option>
-<option value="Экономист">Экономист</option>
- </select>
-</div>
-</div>
+          <div class="form-group">
+                    <label for="EDU2" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input name="EDU2" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
+                  </div>
+
+      <div class="form-group">
+        <label for="COMP2" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP2" class="form-control"  placeholder="Компания, должность">
+      </div>
+  </div>
+
+ 
 <hr/>
 
       <div class="form-group">
@@ -356,27 +387,27 @@
                         <input name="PHONE2" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
                     </div>
                   </div>
-<hr/>
-      <div class="form-group">
-        <label for="COMP2" class="col-lg-2 control-label">Компания</label>
-       <div class="col-lg-10">
 
-        <input type="text" value="" name="COMP2" class="form-control"  placeholder="Наименование компании">
-      </div>
-  </div>
 
- <div class="form-group">
-   <label for="POSITION2" class="col-lg-2 control-label">Должность</label>
-         <div class="col-lg-10">
-    <input type="text" value="" name="POSITION2" class="form-control"  placeholder="Должность">
-</div>
-</div>
-<hr/>
+
 
 </div>
 
 
 <div class="tab-pane fade in clearfix" id="n3">
+
+  <div class="form-group">
+  <label for="ROLE3" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select name="ROLE3" class="form-control" required>
+  <option value=""></option>
+<option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option> </select>
+</div>
+</div>
+<hr/>
       <div class="form-group">
         <label for="LNAME3" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
@@ -398,20 +429,28 @@
     <input type="text" value="" name="MNAME3" class="form-control" required>
 </div>
 </div>
+ <div class="form-group">
+  <label for="BDAY3" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input name="BDAY3" type="date" class="form-control" id="exampleInputO" placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+         <div class="form-group">
+                    <label for="EDU3" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input name="EDU3" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
+                  </div>
 
+      <div class="form-group">
+        <label for="COMP3" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP3" class="form-control"  placeholder="Компания, должность">
+      </div>
+  </div>
 <hr/>
-<div class="form-group">
-  <label for="ROLE3" class="col-lg-2 control-label">Направление</label>
-  <div class="col-lg-10">
-  <select name="ROLE3" class="form-control" required>
-  <option value=""></option>
-<option value="Инженер">Инженер</option>
-<option value="Дизайнер">Дизайнер</option>
-<option value="Программист АСУ">Программист АСУ</option>
-<option value="Экономист">Экономист</option> </select>
-</div>
-</div>
-<hr/>
+
 
       <div class="form-group">
   <label for="EMAIL3" class="col-lg-2 control-label">Email</label>
@@ -426,23 +465,6 @@
                         <input name="PHONE3" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
                     </div>
                   </div>
-
-
-      <div class="form-group">
-        <label for="COMP3" class="col-lg-2 control-label">Компания</label>
-       <div class="col-lg-10">
-
-        <input type="text" value="" name="COMP3" class="form-control" id="COMP3" placeholder="Наименование компании">
-      </div>
-  </div>
-
- <div class="form-group">
-   <label for="POSITION3" class="col-lg-2 control-label">Должность</label>
-         <div class="col-lg-10">
-    <input type="text" value="" name="POSITION3" class="form-control"  placeholder="Должность">
-</div>
-</div>
-<hr/>
 
 </div>
 </div> <!-- tabz-->
@@ -459,7 +481,7 @@
 
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" required>Даю согласие на обработку персональных данных?!
+                      <input id="checkboxPers" type="checkbox" required>Даю согласие на обработку персональных данных
                     </label>
                   </div>
 
@@ -468,8 +490,7 @@
     <div class="response" id="mce-success-response" style="display:none"></div>
   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_e2373dfb66b59ba76023bbe1d_1a9d8d84ac" value=""></div>
-  <!--div class="clear"><input type="submit" value="Отправить заявку" name="subscribe" id="mc-embedded-subscribe" class="button"></div-->
-     <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTIONC").value = document.getElementById("AREAC").value'>Зарегистрироваться</button>
+    <button type="submit" class="btn btn-primary" onclick='document.getElementById("QUESTIONC").value = document.getElementById("AREAC").value'>Зарегистрироваться</button>
 </form>
 <!--End mc_embed_signup-->
                 </div>
@@ -500,5 +521,7 @@
 <script>
      document.getElementById("reg").className = "active";  
 </script>
+
+
 </body>
 </html>
