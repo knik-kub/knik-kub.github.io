@@ -2957,3 +2957,22 @@
 	.the-icons {
 		list-style:none;
 	}
+
+	p {
+  		margin-left: 50px;
+  		margin-right: 50px;
+  		text-align: justify;
+  		text-indent: 50px;
+	}
+
+	.section-whitebg div.container div ul li{
+		margin-left: 80px;
+  		text-align: justify;
+  		text-indent: 8px;
+	}
+	.section-whitebg  div.container div ul{
+		padding-left: 50px;
+  		padding-right: 50px;
+  		text-align: justify;
+  		text-indent: 50px;
+	}

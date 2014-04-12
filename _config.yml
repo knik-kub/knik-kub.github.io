@@ -2,4 +2,4 @@ name: KNIK KUB site
 markdown: redcarpet
 pygments: true
 baseurl: /
-permalink: /:year-:month-:day-:title.html
+permalink: /:year-:month-:day.html

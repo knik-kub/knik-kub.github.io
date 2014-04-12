@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Краевой конкурс молодежных инновационных команд - {{ page.title }}</title>
+    <title>Краевой конкурс молодежных инновационных команд - Главная</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -47,6 +47,8 @@
 
      <section class="section-whitebg dm-shadow">
         <div class="container">
+      <div class="general_wrapper clearfix">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             
             <div class="section-title text-center">
                 <h2 class="bigtitle">{{ page.title }}</h2>
@@ -55,7 +57,34 @@
             <div>
                 {{ content }}
             </div>
-            
+        </div>  
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-comment-o"></i> Новости </h4>
+                            </div><!-- end panel heading -->
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                {% for post in site.posts limit:3 %}
+                <small>{{ post.date | date_to_string }}</small><br/>
+                <h5><a href="{{ post.url }}">{{ post.title | strip_html }}</a></h5>
+                <p >{{ post.excerpt }}</p>
+                <hr/>
+                {% endfor %}
+
+                <br/>        <div class="panel-heading">
+                                <h4 class="panel-title"><i class="fa fa-comment-o"></i> <a href=/novosti.html>Все новости</a></h4>
+                </div>
+
+                </div>
+                </div>
+                </div><!-- end panel -->
+
+
+</div>
+</div>  
+       </div>
     </div>
     </section>
     

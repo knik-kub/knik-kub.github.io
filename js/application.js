@@ -109,7 +109,7 @@ function parallaxInit() {
 // Rotate Text
 	$('.flickr-gallery').each(function(){
 		$(this).jflickrfeed({
-			limit: 8, // how many pictures to display
+			limit: 3, // how many pictures to display
 			qstrings: {
 			id: $(this).data('flickr-id')
 		},
