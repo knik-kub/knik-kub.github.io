@@ -4,12 +4,14 @@ title: Новости
 ---
 
                {% for post in site.posts %}
-               <p>
-               <h4><small>{{ post.date |  date: "%d/%m/%Y" }}</small> <a href="{{ post.url }}">{{ post.title }}</a><br/></h4>
-
-               <h4>{{ post.content | strip_html | truncate:150 }} <a href="{{ post.url }}"><i class="fa fa-external-link"></i> читать целиком...</a></h4>
-               <hr/>
-           		</p>
+               <p class="news">
+               <small class="h4">{{ post.date |  date: "%d/%m/%Y" }}</small><b><a class="h4" href="{{ post.url }}">{{ post.title }}</a></b>
+               <br/>
+               	</p>
+                <p class="news">
+                {{ post.content | strip_html | truncate:150 }} <a href="{{ post.url }}"><i class="fa fa-external-link"></i> читать целиком...</a>
+         	    </p>
+           		<hr/>
                {% endfor %}
 
                 
