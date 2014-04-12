@@ -215,7 +215,7 @@
 <div class="form-group">
   <label for="DIRECTION" class="col-lg-2 control-label">Направление</label>
   <div class="col-lg-10">
-  <select name="DIRECTION" class="form-control"  required>
+  <select id="DIRECTION" name="DIRECTION" class="form-control"  required onchange="rebuildRole();">
   <option value=""></option>
   <option value="Дизайн">Дизайн</option>
 <option value="Автоматизация">Автоматизация</option>
@@ -238,7 +238,7 @@
 <div class="form-group">
   <label for="ROLE1" class="col-lg-2 control-label">Специализация</label>
   <div class="col-lg-10">
-  <select name="ROLE1" class="form-control"  required>
+  <select id="ROLE1" name="ROLE1" class="form-control"  required>
   <option value=""></option>
 <option value="Инженер">Инженер</option>
 <option value="Дизайнер">Дизайнер</option>
@@ -316,7 +316,7 @@
 <div class="form-group">
   <label for="ROLE2" class="col-lg-2 control-label">Специализация</label>
   <div class="col-lg-10">
-  <select name="ROLE2" class="form-control"  required>
+  <select id="ROLE2" name="ROLE2" class="form-control"  required>
   <option value=""></option>
   <option value="Инженер">Инженер</option>
 <option value="Дизайнер">Дизайнер</option>
@@ -400,7 +400,7 @@
   <div class="form-group">
   <label for="ROLE3" class="col-lg-2 control-label">Специализация</label>
   <div class="col-lg-10">
-  <select name="ROLE3" class="form-control" required>
+  <select id="ROLE3" name="ROLE3" class="form-control" required>
   <option value=""></option>
 <option value="Инженер">Инженер</option>
 <option value="Дизайнер">Дизайнер</option>
@@ -519,8 +519,42 @@
     <script src="js/jquery.simple-text-rotator.js"></script>
     <script src="js/application.js"></script>
     
+
 <script>
      document.getElementById("reg").className = "active";  
+</script>
+
+<script>
+       function rebuildRole(){
+        
+        document.getElementById('ROLE1').innerHTML = '';
+        document.getElementById('ROLE2').innerHTML = '';
+        document.getElementById('ROLE3').innerHTML = '';
+
+        document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+
+
+
+        if(document.getElementById("DIRECTION").value==='Дизайн'){
+           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+        }
+        if(document.getElementById("DIRECTION").value==='Автоматизация'){
+           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+         }
+         if(document.getElementById("DIRECTION").value==='Технико-экономическое'){
+             document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+         }
+
+
+     }
 </script>
 
 
