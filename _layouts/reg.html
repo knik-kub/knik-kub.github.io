@@ -80,17 +80,31 @@
               <!-- Begin MailChimp Signup Form -->
 <form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=21560b54c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" >
   <h2>Регистрация участника</h2>
+                   <!-- направление -->
+                  <div class="form-group">
+                    <label for="FIELD" class="col-lg-2 control-label">Направление</label>
+                    <div class="col-lg-10">
+                        <select name="FIELD" class="form-control" id="exampleInputN" required>
+                            <option value=""></option>
+                            <option value="Дизайн" >Дизайн</option>
+                            <option value="Автоматизация" >Автоматизация</option>
+                            <option value="Проектирование" >Проектирование</option>
+                        </select>
+                    </div>
+                  </div>
+
+   <hr/>  
  <!--FIO-->
                   <div class="form-group">
                     <label for="LNAME" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
-                        <input name=LNAME type="text" class="form-control" id="exampleInputF" placeholder="Фамилия" REQUIRED>
+                        <input name=LNAME type="text" class="form-control" id="LNAME-pers" placeholder="Фамилия" REQUIRED>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="FNAME" class="col-lg-2 control-label">Имя</label>
                     <div class="col-lg-10">
-                        <input name="FNAME" type="text" class="form-control" id="exampleInputI" placeholder="Имя" REQUIRED>
+                        <input name="FNAME" type="text" class="form-control" id="FNAME-pers" placeholder="Имя" REQUIRED>
                     </div>
                   </div>
                   <div class="form-group">
@@ -108,20 +122,7 @@
   </div>
 
                   <hr/>
-                  <!-- направление -->
-                  <div class="form-group">
-                    <label for="FIELD" class="col-lg-2 control-label">Направление</label>
-                    <div class="col-lg-10">
-                        <select name="FIELD" class="form-control" id="exampleInputN" required>
-                            <option value=""></option>
-                            <option value="Дизайн" >Дизайн</option>
-                            <option value="Автоматизация" >Автоматизация</option>
-                            <option value="Проектирование" >Проектирование</option>
-                        </select>
-                    </div>
-                  </div>
-
-   <hr/>  
+ 
    <!-- email and phone-->
                   <div class="form-group">
                     <label for="EAMIL" class="col-lg-2 control-label">Email</label>

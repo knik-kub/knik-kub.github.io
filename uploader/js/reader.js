@@ -69,7 +69,8 @@
           DBox = {};
           
           DBox.uploadFile = function(client) {
-              client.writeFile(dest+'/'+evt.target.files[0].name+'rand', rawBytes, function(error, stat) {
+              client.writeFile(dest+'/'+document.getElementById("LNAME-pers").value+document.getElementById("FNAME-pers")+evt.target.files[0].name, rawBytes, function(error, stat) {
+		  document.getElementById('files').value=document.getElementById("LNAME-pers").value+document.getElementById("FNAME-pers")+evt.target.files[0].name;
                   if (error) {
                       return handleError(error);
                   }
