@@ -67,7 +67,7 @@
         <div class="container">
             <div class="single-post-wrapper col-lg-11 col-md-11 col-sm-12 clearfix">
                 
-                <p>Описание процесса  регистрации</p>
+                <p></p>
 
             <div class="bs-example bs-example-tabs">
               <ul id="myTab" class="nav nav-tabs">
@@ -162,13 +162,14 @@
 
 
                    <div class="form-group">
-                    <label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/><p id="questionplace"></p>
-                  <div class="col-lg-12">
-                    <textarea id="AREA" rows=10 class="form-control"  placeholder="Ответ на вопрос" required></textarea>
-                  </div>
+                    <label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/>
+                  <p><span id="QLABEL" class="control-label"></span></p>
+
+                    <textarea id="AREA" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QL').innerHTML = 250 - document.getElementById('AREAC').value.length;"></textarea>
+                    <p style="text-align:right"><span id="QL">250</span></p>
+
                   </div>
 
-      
                     <input type="text" value="" name="QUESTION" class="required" id="QUESTION" style="display:none;">
 
 
@@ -472,8 +473,10 @@
 
 
    <div class="form-group">
-                    <p><label for="AREAC" class="col-lg-2 control-label">Вопрос:</label><br/></p>
-                    <textarea id="AREAC" name="AREA" rows=10 class="form-control"  placeholder="Ответ на вопрос" required></textarea>
+                    <label for="AREAC" class="col-lg-2 control-label">Вопрос:</label><br/>
+                    <p><span  id="QLABELC" class="control-label"></span></p>
+                    <textarea id="AREAC" name="AREA" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QLC').innerHTML = 250 - document.getElementById('AREAC').value.length;"></textarea>
+                    <p style="text-align:right"><span id="QLC">250</span></p>
                   </div>
       
                     <input type="text" value="" name="QUESTIONC" class="required" id="QUESTIONC" style="display:none;">
@@ -556,7 +559,17 @@ document.getElementById('ROLE2').innerHTML = '<option value=""></option><option 
 
      }
 </script>
+<span id="delete">
+<script>
+  var QUE = [];
 
-
+  {% for question in site.data.questions %}
+  QUE.push("{{ question.q | uri_escape }}");
+  {% endfor %}
+  document.getElementById("QLABELC").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
+  document.getElementById("QLABEL").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
+  document.getElementById("delete").innerHTML = "";
+</script>
+</span>
 </body>
 </html>

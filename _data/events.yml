@@ -1,29 +1,4 @@
-- name: Торжественное открытие конкурса
-  sdate: 15.04.2014
-  stime: 10-00
-  location: ул. Ленина 8
-
-- name: Начало регистрации участников
-  sdate: 16.04.2014
-  stime: 00-00
-  location: online
-
-- name: Завершение регистрации участников
-  sdate: 16.05.2014
-  stime: 23-59
-  location: online
-
-- name: Формирование команд
-  sdate: 17.05.2014
-  stime: 11-00
-  location: online
-
-- name: Выдача конкурсних заданий
-  sdate: 19.05.2014
-  stime: 12-00
-  location: online
-
-- name: Подведение итогов
-  sdate: 19.12.2014
-  stime: 19-00
-  location: ул. Ленина 8
+- name: 
+  sdate: 
+  stime: 
+  location: 
