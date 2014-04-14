@@ -3,26 +3,23 @@ layout: programma
 title: Программа мероприятия
 ---
 <p>
-Программа мероприятия
+Программа мероприятий
 <p>
 <table class="table" class="news">
 	<tr>
-		<td>Дата
-		<td>время
-		<td>Описание
-			
-<tr>
-		<td>1/1/1	
-		<td>1:00
-		<td>Мероприятие1
-<tr>
-		<td>1/1/1	
-		<td>1:00
-		<td>Мероприятие1
-<tr>
-		<td>1/1/1	
-		<td>1:00
-		<td>Мероприятие1
-			
+		<th>Дата
+		<th>Время
+		<th>Название
+	<tbody class="table-striped">
+	    {% for event in site.data.events %}    
+	    	<tr>
+	    		<td>
+	    			{{ event.date }}
+	    		<td>
+	    			{{ event.time }}
+	    		<td>
+	    			{{ event.name }}
+		{% endfor %}
+	</tbody>		
 </table>
 </p>
