@@ -53,7 +53,7 @@
                 {{ content }}
             </div>
         </div>
-    </sections>
+    </section>
     
   
 {% include footer.html %}
@@ -73,10 +73,50 @@
     <script src="js/jquery.jigowatt.js"></script>
     <script src="js/jquery.simple-text-rotator.js"></script>
     <script src="js/application.js"></script>
-    
+       <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="/js/jquery.gmap.min.js"></script>
+    <script>
+    // MAP
+   jQuery(document).ready(function($) {
+        $("#responsive_map").gMap({
+             maptype: google.maps.MapTypeId.ROADMAP, 
+             zoom: 16, 
+             markers: [{
+                 latitude: 48.466674, 
+                 longitude: 135.068848, 
+                 html: "<img src='images/logo.png' width='32'> Мы находимся ЗДЕСЬ", 
+                 popup: true, 
+                 flat: true, 
+                 icon: { 
+                     image: "images/tunnel.png", 
+                     iconsize: [32, 37], 
+                     iconanchor: [15, 30], 
+                     shadow: "images/icon-shadow.png", 
+                     shadowsize: [32, 37], 
+                     shadowanchor: null}
+                    } 
+                ], 
+             panControl: true, 
+             zoomControl: true, 
+             mapTypeControl: true, 
+             scaleControl: true, 
+             streetViewControl: true, 
+             scrollwheel: false, 
+             styles: [ { "stylers": [ { "hue": "#007ACC" }, { "gamma": 0 } ] } ], 
+             onComplete: function() {
+                 // Resize and re-center the map on window resize event
+                 var gmap = $("#responsive_map").data('gmap').gmap;
+                 window.onresize = function(){
+                     google.maps.event.trigger(gmap, 'resize');
+                     $("#responsive_map").gMap('fixAfterResize');
+                 };
+            }
+        });
+    });
+    </script>
   
     <script>
-     document.getElementById("index").className = "active";  
+     document.getElementById("contact").className = "active";  
 </script>
 </body>
 </html>
