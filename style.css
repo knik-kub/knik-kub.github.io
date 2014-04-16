@@ -606,8 +606,11 @@
 	}
 	
 	body#boxed { 
-	  background: url(sliderimages/01_bg.png) repeat fixed; 
-
+	  background: url(sliderimages/bg1_1.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	}
 	
 	/* Section Slider */
