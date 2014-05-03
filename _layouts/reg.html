@@ -80,15 +80,28 @@
               <!-- Begin MailChimp Signup Form -->
 <form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=21560b54c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-horizontal" role="form" target="_blank" >
   <h2>Регистрация участника</h2>
+                <div class="form-group">
+                <label for="DIRECTION" class="col-lg-2 control-label">Направление</label>
+                <div class="col-lg-10">
+                  <select id="DIRECTION" name="DIRECTION" class="form-control"  required onchange="rebuildRole();">
+                      <option value=""></option>
+                      <option value="Дизайн-проект" >Дизайн-проект</option>
+                      <option value="Проект автоматизации" >Проект автоматизации</option>
+                      <option value="Технико-экономический проект" >Технико-экономический проект</option>
+                 </select>
+                </div>
+              </div>
+
                    <!-- направление -->
                   <div class="form-group">
-                    <label for="FIELD" class="col-lg-2 control-label">Направление</label>
+                    <label for="FIELD" class="col-lg-2 control-label">Специализация</label>
                     <div class="col-lg-10">
                         <select name="FIELD" class="form-control" id="exampleInputN" required>
                             <option value=""></option>
-                            <option value="Дизайн-проект" >Дизайн-проект</option>
-                            <option value="Проект автоматизации" >Проект автоматизации</option>
-                            <option value="Технико-экономический проект" >Технико-экономический проект</option>
+                            <option value="Инженер" >Инженер</option>
+                            <option value="Дизайнер" >Дизайнер</option>
+                            <option value="Экономист" >Экономист</option>
+                            <option value="Программист АСУ" >Программист АСУ</option>
                         </select>
                     </div>
                   </div>
@@ -125,7 +138,7 @@
  
    <!-- email and phone-->
                   <div class="form-group">
-                    <label for="EAMIL" class="col-lg-2 control-label">Email</label>
+                    <label for="EMAIL" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
                         <input name="EMAIL" type="email" class="form-control" id="exampleInputE" placeholder="yourname@youremail.ru" required>
                     </div>
@@ -162,10 +175,10 @@
 
 
                    <div class="form-group">
-                    <label for="Crea" class="col-lg-2 control-label">Вопрос:</label><br/>
-                  <p><span id="QLABEL" class="control-label"></span></p>
+                    <label for="Crea" class="control-label">Вопрос на креативность: </label>
+                  <span id="QLABEL" class="">«Как много надувных шариков поместится в вашей комнате?»</span><br/>
 
-                    <textarea id="AREA" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QL').innerHTML = 250 - document.getElementById('AREAC').value.length;"></textarea>
+                    <textarea id="AREA" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QL').innerHTML = 250 - document.getElementById('AREA').value.length;"></textarea>
                     <p style="text-align:right"><span id="QL">250</span></p>
 
                   </div>
@@ -205,9 +218,9 @@
                 
                   <!-- form for team -->
 <!-- Begin MailChimp Signup Form -->
-<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=1a9d8d84ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank"  class="form-horizontal" role="form">
+<form action="http://github.us8.list-manage.com/subscribe/post?u=e2373dfb66b59ba76023bbe1d&amp;id=1a9d8d84ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank"  class="form-horizontal" role="form" onSubmit="makeConcat();">
 
-<div class="form-group">
+<div class="form-group" >
   <label for="CNAME" class="col-lg-2 control-label">Название</label>
   <div class="col-lg-10">
     <input type="text" value="" name="CNAME" class="form-control"  required placeholder="Название команды">
@@ -230,22 +243,26 @@
 
 <div class="tab-services clearfix">
               <ul id="myTab1" class="nav nav-tabs">
-                <li class="active"><a href="#n1" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №1</a></li>
-                <li class=""><a href="#n2" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №2</a></li>
-                <li class=""><a href="#n3" data-toggle="tab"><i class="fa fa-user"></i>Участник команды №3</a></li>
+                <li class="active"><a href="#n1" data-toggle="tab"><i class="fa fa-user"></i>Участник №1</a></li>
+                <li class=""><a href="#n2" data-toggle="tab"><i class="fa fa-user"></i>Участник №2</a></li>
+                <li class=""><a href="#n3" data-toggle="tab"><i class="fa fa-user"></i>Участник №3</a></li>
+                <li class=""><a href="#n4" data-toggle="tab"><i class="fa fa-user"></i>Участник №4</a></li>
+                <li class=""><a href="#n5" data-toggle="tab"><i class="fa fa-user"></i>Участник №5</a></li>
               </ul>
-              <div id="myTabContent1" class="tab-content">
-                <div class="tab-pane fade active in clearfix" id="n1">
+
+<div id="myTabContent1" class="tab-content">
+
+<div class="tab-pane fade active in clearfix" id="n1">
 
 <div class="form-group">
   <label for="ROLE1" class="col-lg-2 control-label">Специализация</label>
   <div class="col-lg-10">
   <select id="ROLE1" name="ROLE1" class="form-control"  required>
-  <option value=""></option>
-<option value="Инженер">Инженер</option>
-<option value="Дизайнер">Дизайнер</option>
-<option value="Программист АСУ">Программист АСУ</option>
-<option value="Экономист">Экономист</option> </select>
+    <option value=""></option>
+    <option value="Инженер">Инженер</option>
+    <option value="Дизайнер">Дизайнер</option>
+    <option value="Программист АСУ">Программист АСУ</option>
+    <option value="Экономист">Экономист</option> </select>
 </div>
 </div>
 <hr/>
@@ -253,7 +270,7 @@
       <div class="form-group">
         <label for="LNAME1" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
-                          <input type="text" value="" name="LNAME1" class="form-control" required>
+                          <input type="text" id="NAME1L" name="NAME1L" class="form-control" required>
                     </div>
       </div>
 
@@ -261,28 +278,31 @@
 <div class="form-group">
   <label for="FNAME1" class="col-lg-2 control-label">Имя</label>
   <div class="col-lg-10">
-    <input type="text" value="" name="FNAME1" class="form-control"  required>
-</div>
+    <input type="text"  name="NAME1F" id="NAME1F" class="form-control"  required>
+  </div>
 </div>
 
 
 <div class="form-group">
   <label for="MNAME1" class="col-lg-2 control-label">Отчеcтво</label>
   <div class="col-lg-10">
-    <input type="text" value="" name="MNAME1" class="form-control"  required>
-</div>
+    <input type="text"  name="NAME1M" id="NAME1M" class="form-control"  required>
+    <input type="hidden"  id="NAME1" name="NAME1" value=" ">
+  </div>
 </div>
 
+
+
  <div class="form-group">
-  <label for="BDAY1" class="col-lg-2 control-label">Дата рождения</label>
-  <div class="col-lg-2">
-            <input name="BDAY1" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
-  </div>
-  </div>
-                      <div class="form-group">
+    <label for="BDAY1" class="col-lg-2 control-label">Дата рождения</label>
+      <div class="col-lg-2">
+            <input name="BDAY1" id="BDAY1" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+      </div>
+</div>
+                    <div class="form-group">
                     <label for="EDU1" class="col-lg-2 control-label">Образование</label>
                     <div class="col-lg-10">
-                        <input name="EDU1" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                        <input name="EDU1" id="EDU1" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
                     </div>
                   </div>
 
@@ -290,9 +310,9 @@
         <label for="COMP1" class="col-lg-2 control-label">Место работы</label>
        <div class="col-lg-10">
 
-        <input type="text" value="" name="COMP1" class="form-control" id="COMP1" placeholder="Компания, должность">
+        <input type="text" value=" " name="COMP1" class="form-control" id="COMP1" placeholder="Компания, должность">
+        </div>
       </div>
-  </div>
 
 <hr/>
 
@@ -301,6 +321,7 @@
   <label for="mce-EMAIL" class="col-lg-2 control-label">Email</label>
   <div class="col-lg-10">
      <input name="EMAIL" type="text" class="form-control" id="exampleInputNK" placeholder="teammember1email@domain.com" required>
+     <input name="PERSDATA1" id="PERSDATA1" type="hidden">
   </div>
 </div>
 
@@ -315,94 +336,11 @@
 </div>
 
 <div class="tab-pane fade in clearfix" id="n2">
+
 <div class="form-group">
   <label for="ROLE2" class="col-lg-2 control-label">Специализация</label>
   <div class="col-lg-10">
   <select id="ROLE2" name="ROLE2" class="form-control"  required>
-  <option value=""></option>
-  <option value="Инженер">Инженер</option>
-<option value="Дизайнер">Дизайнер</option>
-<option value="Программист АСУ">Программист АСУ</option>
-<option value="Экономист">Экономист</option>
- </select>
-</div>
-</div>
-
-<hr/>
-      <div class="form-group">
-        <label for="LNAME2" class="col-lg-2 control-label">Фамилия</label>
-                    <div class="col-lg-10">
-                          <input type="text" value="" name="LNAME2" class="form-control"  required>
-                    </div>
-      </div>
-
-
-<div class="form-group">
-  <label for="FNAME2" class="col-lg-2 control-label">Имя</label>
-  <div class="col-lg-10">
-    <input type="text" value="" name="FNAME2" class="form-control"  required>
-</div>
-</div>
-
-
-<div class="form-group">
-  <label for="MNAME2" class="col-lg-2 control-label">Отчеcтво</label>
-  <div class="col-lg-10">
-    <input type="text" value="" name="MNAME2" class="form-control"  required>
-</div>
-</div>
- <div class="form-group">
-  <label for="BDAY2" class="col-lg-2 control-label">Дата рождения</label>
-  <div class="col-lg-2">
-            <input name="BDAY2" type="date" class="form-control" id="exampleInputO" placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
-  </div>
-  </div>
-
-          <div class="form-group">
-                    <label for="EDU2" class="col-lg-2 control-label">Образование</label>
-                    <div class="col-lg-10">
-                        <input name="EDU2" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
-                    </div>
-                  </div>
-
-      <div class="form-group">
-        <label for="COMP2" class="col-lg-2 control-label">Место работы</label>
-       <div class="col-lg-10">
-
-        <input type="text" value="" name="COMP2" class="form-control"  placeholder="Компания, должность">
-      </div>
-  </div>
-
- 
-<hr/>
-
-      <div class="form-group">
-  <label for="EMAIL2" class="col-lg-2 control-label">Email</label>
-  <div class="col-lg-10">
-     <input name="EMAIL2" type="text" class="form-control" id="exampleInputNK" placeholder="teammember2email@domain.com" required>
-  </div>
-</div>
-
-
- <div class="form-group">
-                    <label for="PHONE2" class="col-lg-2 control-label">Телефон</label>
-                    <div class="col-lg-10">
-                        <input name="PHONE2" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
-                    </div>
-                  </div>
-
-
-
-
-</div>
-
-
-<div class="tab-pane fade in clearfix" id="n3">
-
-  <div class="form-group">
-  <label for="ROLE3" class="col-lg-2 control-label">Специализация</label>
-  <div class="col-lg-10">
-  <select id="ROLE3" name="ROLE3" class="form-control" required>
   <option value=""></option>
 <option value="Инженер">Инженер</option>
 <option value="Дизайнер">Дизайнер</option>
@@ -411,10 +349,95 @@
 </div>
 </div>
 <hr/>
+
+      <div class="form-group">
+        <label for="LNAME2" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" name="NAME2L" id="NAME2L" class="form-control" required>
+                    </div>
+      </div>
+
+
+<div class="form-group">
+  <label for="FNAME1" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text"   name="NAME2F" id="NAME2F" class="form-control"  required>
+</div>
+</div>
+
+
+<div class="form-group">
+  <label for="MNAME1" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text"  name="NAME2M"  id="NAME2M" class="form-control"  required>
+    <input type="hidden" id="NAME2" name="NAME2"  value=" ">
+</div>
+</div>
+
+
+
+ <div class="form-group">
+  <label for="BDAY2" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input name="BDAY2" id="BDAY2" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+                      <div class="form-group">
+                    <label for="EDU2" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input id="EDU2" name="EDU2" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
+                  </div>
+
+      <div class="form-group">
+        <label for="COMP2" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP2" class="form-control" id="COMP2" placeholder="Компания, должность">
+      </div>
+  </div>
+
+<hr/>
+
+
+      <div class="form-group">
+  <label for="mce-EMAIL" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="EMAIL2" type="text" class="form-control" id="exampleInputNK" placeholder="teammember1email@domain.com" required>
+     <input name="PERSDATA2" id="PERSDATA2" type="hidden">
+  </div>
+</div>
+
+
+<div class="form-group">
+                    <label for="PHONE2" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE2" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+
+</div>
+
+
+<div class="tab-pane fade in clearfix" id="n3">
+
+<div class="form-group">
+  <label for="ROLE3" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select id="ROLE3" name="ROLE3" class="form-control"  required>
+  <option value=""></option>
+<option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option> </select>
+</div>
+</div>
+<hr/>
+
       <div class="form-group">
         <label for="LNAME3" class="col-lg-2 control-label">Фамилия</label>
                     <div class="col-lg-10">
-                          <input type="text" value="" name="LNAME3" class="form-control"  required>
+                          <input type="text" name="NAME3L" id="NAME3L" class="form-control" required>
                     </div>
       </div>
 
@@ -422,26 +445,31 @@
 <div class="form-group">
   <label for="FNAME3" class="col-lg-2 control-label">Имя</label>
   <div class="col-lg-10">
-    <input type="text" value="" name="FNAME3" class="form-control"  required>
+    <input type="text"  name="NAME3F" id="NAME3F" class="form-control"  required>
 </div>
 </div>
+
 
 <div class="form-group">
   <label for="MNAME3" class="col-lg-2 control-label">Отчеcтво</label>
   <div class="col-lg-10">
-    <input type="text" value="" name="MNAME3" class="form-control" required>
+    <input type="text"  name="NAME3M" id="NAME3M" class="form-control"  required>
+    <input type="hidden" id="NAME3" name="NAME3"  value=" ">
 </div>
 </div>
+
+
+
  <div class="form-group">
   <label for="BDAY3" class="col-lg-2 control-label">Дата рождения</label>
   <div class="col-lg-2">
-            <input name="BDAY3" type="date" class="form-control" id="exampleInputO" placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+            <input id="BDAY3" name="BDAY3" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
   </div>
   </div>
-         <div class="form-group">
+                      <div class="form-group">
                     <label for="EDU3" class="col-lg-2 control-label">Образование</label>
                     <div class="col-lg-10">
-                        <input name="EDU3" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                        <input id="EDU3" name="EDU3" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
                     </div>
                   </div>
 
@@ -449,40 +477,212 @@
         <label for="COMP3" class="col-lg-2 control-label">Место работы</label>
        <div class="col-lg-10">
 
-        <input type="text" value="" name="COMP3" class="form-control"  placeholder="Компания, должность">
+        <input type="text" value="" name="COMP3" class="form-control" id="COMP3" placeholder="Компания, должность">
       </div>
   </div>
+
 <hr/>
 
 
       <div class="form-group">
-  <label for="EMAIL3" class="col-lg-2 control-label">Email</label>
+  <label for="mce-EMAIL3" class="col-lg-2 control-label">Email</label>
   <div class="col-lg-10">
      <input name="EMAIL3" type="text" class="form-control" id="exampleInputNK" placeholder="teammember3email@domain.com" required>
+     <input name="PERSDATA3" id="PERSDATA3" type="hidden">
   </div>
 </div>
+
 
 <div class="form-group">
                     <label for="PHONE3" class="col-lg-2 control-label">Телефон</label>
                     <div class="col-lg-10">
-                        <input name="PHONE3" type="tel" class="form-control" id="exampleInputP" placeholder="79090000000" pattern="[0-9]*" required>
+                        <input name="PHONE3" type="tel" class="form-control" id="exampleInputP" placeholder="79090000003" pattern="[0-9]*" required>
                     </div>
                   </div>
 
 </div>
-</div> <!-- tabz-->
+
+<div class="tab-pane fade in clearfix" id="n4">
+
+<div class="form-group">
+  <label for="ROLE4" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select id="ROLE4" name="ROLE4" class="form-control"  required>
+  <option value=""></option>
+<option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option> </select>
+</div>
+</div>
+<hr/>
+
+      <div class="form-group">
+        <label for="LNAME4" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" name="NAME4L" id="NAME4L" class="form-control" required>
+                    </div>
+      </div>
 
 
-   <div class="form-group">
-                    <label for="AREAC" class="col-lg-2 control-label">Вопрос:</label><br/>
-                    <p><span  id="QLABELC" class="control-label"></span></p>
-                    <textarea id="AREAC" name="AREA" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QLC').innerHTML = 250 - document.getElementById('AREAC').value.length;"></textarea>
-                    <p style="text-align:right"><span id="QLC">250</span></p>
+<div class="form-group">
+  <label for="FNAME4" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text"  name="NAME4F" id="NAME4F" class="form-control"  required>
+</div>
+</div>
+
+
+<div class="form-group">
+  <label for="MNAME4" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text"  name="NAME4M" id="NAME4M"  class="form-control"  required>
+    <input type="hidden" id="NAME4" name="NAME4"  value=" ">
+</div>
+</div>
+
+
+
+ <div class="form-group">
+  <label for="BDAY4" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input id="BDAY4" name="BDAY4" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+                      <div class="form-group">
+                    <label for="EDU4" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input id="EDU4" name="EDU4" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
                   </div>
-      
+
+      <div class="form-group">
+        <label for="COMP4" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP4" class="form-control" id="COMP4" placeholder="Компания, должность">
+      </div>
+  </div>
+
+<hr/>
+
+
+      <div class="form-group">
+  <label for="mce-EMAIL4" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="EMAIL4" type="text" class="form-control" id="exampleInputNK" placeholder="teammember4email@domain.com" required>
+     <input name="PERSDATA4" id="PERSDATA4" type="hidden">
+  </div>
+</div>
+
+
+<div class="form-group">
+                    <label for="PHONE4" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE4" type="tel" class="form-control" id="exampleInputP" placeholder="79090000004" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+
+</div>
+
+<div class="tab-pane fade in clearfix" id="n5">
+
+<div class="form-group">
+  <label for="ROLE5" class="col-lg-2 control-label">Специализация</label>
+  <div class="col-lg-10">
+  <select id="ROLE5" name="ROLE5" class="form-control"  required>
+  <option value=""></option>
+<option value="Инженер">Инженер</option>
+<option value="Дизайнер">Дизайнер</option>
+<option value="Программист АСУ">Программист АСУ</option>
+<option value="Экономист">Экономист</option> </select>
+</div>
+</div>
+<hr/>
+
+      <div class="form-group">
+        <label for="LNAME5" class="col-lg-2 control-label">Фамилия</label>
+                    <div class="col-lg-10">
+                          <input type="text" name="NAME5L" id="NAME5L" class="form-control" required>
+                    </div>
+      </div>
+
+
+<div class="form-group">
+  <label for="FNAME5" class="col-lg-2 control-label">Имя</label>
+  <div class="col-lg-10">
+    <input type="text"  name="NAME5F" id="NAME5F" class="form-control"  required>
+</div>
+</div>
+
+
+<div class="form-group">
+  <label for="MNAME5" class="col-lg-2 control-label">Отчеcтво</label>
+  <div class="col-lg-10">
+    <input type="text"  name="NAME5M" id="NAME5M"  class="form-control"  required>
+    <input type="hidden" id="NAME5" name="NAME5"  value=" ">
+</div>
+</div>
+
+
+
+ <div class="form-group">
+  <label for="BDAY5" class="col-lg-2 control-label">Дата рождения</label>
+  <div class="col-lg-2">
+            <input id="BDAY5" name="BDAY5" type="date" class="form-control"  placeholder="ДД/ММ/ГГГГ" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" REQUIRED>
+  </div>
+  </div>
+                      <div class="form-group">
+                    <label for="EDU5" class="col-lg-2 control-label">Образование</label>
+                    <div class="col-lg-10">
+                        <input id="EDU5" name="EDU5" type="text" class="form-control" id="exampleInputP" placeholder="Учебное заведение, специальность, курс" required>
+                    </div>
+                  </div>
+
+      <div class="form-group">
+        <label for="COMP5" class="col-lg-2 control-label">Место работы</label>
+       <div class="col-lg-10">
+
+        <input type="text" value="" name="COMP5" class="form-control" id="COMP5" placeholder="Компания, должность">
+      </div>
+  </div>
+
+<hr/>
+
+
+      <div class="form-group">
+  <label for="mce-EMAIL" class="col-lg-2 control-label">Email</label>
+  <div class="col-lg-10">
+     <input name="EMAIL5" type="text" class="form-control" id="exampleInputNK" placeholder="teammember5email@domain.com" required>
+     <input name="PERSDATA5" id="PERSDATA5" type="hidden">
+  </div>
+</div>
+
+
+<div class="form-group">
+                    <label for="PHONE5" class="col-lg-2 control-label">Телефон</label>
+                    <div class="col-lg-10">
+                        <input name="PHONE5" type="tel" class="form-control" id="exampleInputP" placeholder="79090000005" pattern="[0-9]*" required>
+                    </div>
+                  </div>
+
+</div>
+
+</div>
+
+
+                   <div class="form-group">
+                    <label for="Crea" class="control-label">Вопрос на креативность: </label>
+                  <span id="QLABELC" class="">«Как много надувных шариков поместится в вашей комнате?»</span><br/>
+
+                    <textarea id="AREAC" rows=10 maxlength=250 class="form-control"  placeholder="Ответ на вопрос" required onkeypress="document.getElementById('QLC').innerHTML = 250 - document.getElementById('AREAC').value.length;"></textarea>
+                    <p style="text-align:right"><span id="QLC">250</span></p>
+
+                  </div>
+
                     <input type="text" value="" name="QUESTIONC" class="required" id="QUESTIONC" style="display:none;">
 
-</div> 
+
 
                   <div class="checkbox">
                     <label>
@@ -529,48 +729,24 @@
 </script>
 
 <script>
-       function rebuildRole(){
-        
-        document.getElementById('ROLE1').innerHTML = '';
-        document.getElementById('ROLE2').innerHTML = '';
-        document.getElementById('ROLE3').innerHTML = '';
+      function makeConcat(){
+          document.getElementById("NAME1").value = document.getElementById("NAME1L").value + " " + document.getElementById("NAME1F").value + " " + document.getElementById("NAME1M").value;
+      
+      document.getElementById("NAME2").value = document.getElementById("NAME2L").value + " " + document.getElementById("NAME2F").value + " " + document.getElementById("NAME2M").value;
+      document.getElementById("NAME3").value = document.getElementById("NAME3L").value + " " + document.getElementById("NAME3F").value + " " + document.getElementById("NAME3M").value;
+      document.getElementById("NAME4").value = document.getElementById("NAME4L").value + " " + document.getElementById("NAME4F").value + " " + document.getElementById("NAME4M").value;
+      document.getElementById("NAME5").value = document.getElementById("NAME5L").value + " " + document.getElementById("NAME5F").value + " " + document.getElementById("NAME5M").value;
+      
 
-        document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
-document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
-document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+        document.getElementById("PERSDATA1").value = document.getElementById("BDAY1").value + ";" + document.getElementById("EDU1").value + ";" + document.getElementById("COMP1").value;
+        document.getElementById("PERSDATA2").value = document.getElementById("BDAY2").value + ";" + document.getElementById("EDU2").value + ";" + document.getElementById("COMP2").value;
+        document.getElementById("PERSDATA3").value = document.getElementById("BDAY3").value + ";" + document.getElementById("EDU3").value + ";" + document.getElementById("COMP3").value;
+        document.getElementById("PERSDATA4").value = document.getElementById("BDAY4").value + ";" + document.getElementById("EDU4").value + ";" + document.getElementById("COMP4").value;
+        document.getElementById("PERSDATA5").value = document.getElementById("BDAY5").value + ";" + document.getElementById("EDU5").value + ";" + document.getElementById("COMP5").value;
 
-
-
-        if(document.getElementById("DIRECTION").value==='Дизайн'){
-           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
-           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
-            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
-        }
-        if(document.getElementById("DIRECTION").value==='Автоматизация'){
-           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
-           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
-            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
-         }
-         if(document.getElementById("DIRECTION").value==='Технико-экономическое'){
-             document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
-           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
-            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
-         }
-
-
-     }
+      }
 </script>
-<span id="delete">
-<script>
-  var QUE = [];
 
-  {% for question in site.data.questions %}
-  QUE.push("{{ question.q | uri_escape }}");
-  {% endfor %}
-  document.getElementById("QLABELC").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
-  document.getElementById("QLABEL").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
-  document.getElementById("delete").innerHTML = "";
-</script>
-</span>
+
 </body>
 </html>

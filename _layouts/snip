@@ -1,0 +1,43 @@
+
+<script>
+       function rebuildRole(){
+        
+        document.getElementById('ROLE1').innerHTML = '';
+        document.getElementById('ROLE2').innerHTML = '';
+        document.getElementById('ROLE3').innerHTML = '';
+
+        document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option><option value="Программист АСУ">Программист АСУ</option><option value="Экономист">Экономист</option>';
+
+
+
+        if(document.getElementById("DIRECTION").value==='Дизайн'){
+           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Дизайнер">Дизайнер</option>';
+        }
+        if(document.getElementById("DIRECTION").value==='Автоматизация'){
+           document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Программист АСУ">Программист АСУ</option>';
+         }
+         if(document.getElementById("DIRECTION").value==='Технико-экономическое'){
+             document.getElementById('ROLE1').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+           document.getElementById('ROLE2').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+            document.getElementById('ROLE3').innerHTML = '<option value=""></option><option value="Инженер">Инженер</option><option value="Экономист">Экономист</option>';
+         }
+
+
+     }
+</script>
+<script>
+  var QUE = [];
+
+  {% for question in site.data.questions %}
+  QUE.push("{{ question.q | uri_escape }}");
+  {% endfor %}
+  document.getElementById("QLABELC").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
+  document.getElementById("QLABEL").innerHTML = decodeURIComponent(QUE[Math.floor(Math.random() * (QUE.length))]);
+  document.getElementById("delete").innerHTML = "";
+</script>
