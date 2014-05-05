@@ -36,7 +36,7 @@
 		padding: 0px;
 	} 
 	body {
-		font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+		font-family: Tahoma,'Droid Sans', Arial, Helvetica, sans-serif;
 		font-size:14px;
 		line-height:20px; 
 		position:relative;
@@ -422,7 +422,7 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 1.573em;
-    padding: 17px 15px;
+    padding: 17px 13px;
     text-decoration: none;
 }
 .navbar-default {
