@@ -67,9 +67,22 @@
     }
   </script>
             <div id="gallerywrapper" >
-                </div>
+	           </div>
     
         </div>
+            <div class="section-title text-center">
+                <h2 class="bigtitle">Видеогалерея</h2>
+                <hr>
+          </div><!-- end section-title -->    
+        <!-- iterate -->
+    
+
+       <div style="text-align:center;">         
+	    {% for videoalbum in site.data.video %}    
+		<iframe width="640" height="480" src="//{{ videoalbum.link }}" frameborder="0" allowfullscreen></iframe>    
+		<br/>
+	    {% endfor %}
+       </div>
     </div>
     </section>
     
