@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Краевой конкурс молодежных инновационных команд - Регистрация</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link href="css/colors.css" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png">
+
+   <link rel="stylesheet" href="uploader/css/normalize.css">
+        <link rel="stylesheet" href="uploader/css/main.css">
+        <style>
+          #progress_bar {
+            margin: 10px 0;
+            padding: 3px;
+            border: 1px solid #000;
+            font-size: 14px;
+            clear: both;
+            opacity: 0;
+            -moz-transition: opacity 1s linear;
+            -o-transition: opacity 1s linear;
+            -webkit-transition: opacity 1s linear;
+          }
+          #progress_bar.loading {
+            opacity: 1.0;
+          }
+          #progress_bar .percent {
+            background-color: #99ccff;
+            height: auto;
+            width: 0;
+          }
+        </style>
+
+        <script src="uploader/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+
+</head>
+<body id="boxed" >
+    <div id="wrapper" class="container">
+
+{% include topbar.html %}    
+{% include header.html %}    
+  
+   <section class="section-single">
+        <div class="container">
+   <p>Регистрация закрыта
+             
+        </div><!-- end container -->
+    </section><!-- end section-single -->
+       
+    
+  
+{% include footer.html %}
+
+      
+   <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fhmm.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/jquery.fitvids.js"></script>    
+    <script src="js/jquery.unveilEffects.js"></script>  
+    <script src="js/retina-1.1.0.js"></script>
+    <script src="js/jquery.jigowatt.js"></script>
+    <script src="js/jquery.simple-text-rotator.js"></script>
+    <script src="js/application.js"></script>
+    
+
+<script>
+     document.getElementById("reg").className = "active";  
+</script>
+
+<script>
+      function makeConcat(){
+          document.getElementById("NAME1").value = document.getElementById("NAME1L").value + " " + document.getElementById("NAME1F").value + " " + document.getElementById("NAME1M").value;
+      
+      document.getElementById("NAME2").value = document.getElementById("NAME2L").value + " " + document.getElementById("NAME2F").value + " " + document.getElementById("NAME2M").value;
+      document.getElementById("NAME3").value = document.getElementById("NAME3L").value + " " + document.getElementById("NAME3F").value + " " + document.getElementById("NAME3M").value;
+      document.getElementById("NAME4").value = document.getElementById("NAME4L").value + " " + document.getElementById("NAME4F").value + " " + document.getElementById("NAME4M").value;
+      document.getElementById("NAME5").value = document.getElementById("NAME5L").value + " " + document.getElementById("NAME5F").value + " " + document.getElementById("NAME5M").value;
+      
+
+        document.getElementById("PERSDATA1").value = document.getElementById("BDAY1").value + ";" + document.getElementById("EDU1").value + ";" + document.getElementById("COMP1").value;
+        document.getElementById("PERSDATA2").value = document.getElementById("BDAY2").value + ";" + document.getElementById("EDU2").value + ";" + document.getElementById("COMP2").value;
+        document.getElementById("PERSDATA3").value = document.getElementById("BDAY3").value + ";" + document.getElementById("EDU3").value + ";" + document.getElementById("COMP3").value;
+        document.getElementById("PERSDATA4").value = document.getElementById("BDAY4").value + ";" + document.getElementById("EDU4").value + ";" + document.getElementById("COMP4").value;
+        document.getElementById("PERSDATA5").value = document.getElementById("BDAY5").value + ";" + document.getElementById("EDU5").value + ";" + document.getElementById("COMP5").value;
+
+      }
+</script>
+
+
+</body>
+</html>
