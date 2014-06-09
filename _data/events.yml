@@ -1,5 +1,67 @@
-- name: 
-  sdate: 
+- name: Регистрация участников Конкурса
+  sdate: 12.05 - 03.06
   stime: 
   location: 
+  
+- name: Формирование команд
+  sdate: 04.06 - 06.06
+  stime: 
+  location: 
+  
+- name: «Установочный семинар»
+  sdate: 11.06
+  stime: 
+  location: г. Комсомольск -на- Амуре
+  
+- name: «Установочный семинар»
+  sdate: 16.06
+  stime: 
+  location: г. Хабаровск
+  
+- name: «Установочный семинар»
+  sdate: 16.06
+  stime: 
+  location: г. Хабаровск
+  
+- name: Обучение
+  sdate: 19.06-21.06
+  stime: 
+  location: г. Хабаровск
+
+- name: Обучение
+  sdate: 23.06-25.06
+  stime: 
+  location: г. Комсомольск-на -Амуре
+    
+- name: Работа над кейсами
+  sdate: 26.06-07.07
+  stime: 
+  location:
+  
+- name: Полуфинал г. Комсомольск-на -Амуре
+  sdate: 9.07
+  stime: 
+  location:  
+  
+- name: Полуфинал г.Хабаровск
+  sdate: 10.07
+  stime: 
+  location:  
+  
+- name: Работа над кейсами, семинары по теме «Создание и развитие собственного бизнеса в Хабаровском крае»
+  sdate: 10.09-30.10
+  stime: 
+  location:  
+  
+- name: Финал
+  sdate: 31.10
+  stime: 
+  location:  
+  
+  
+  
+  
+  
+  
+  
   
